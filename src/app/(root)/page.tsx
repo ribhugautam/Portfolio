@@ -5,7 +5,7 @@ export default function Home() {
     <div className="pattern h-dvh">
       <div className="w-11/12 max-w-[80%] mx-auto font-Caveat">
         {/* Hero */}
-        <div className="container flex flex-col justify-center p-6 mx-auto sm:py-52 lg:flex-row lg:justify-between">
+        <div className="container flex flex-col justify-center p-6 py-28 mx-auto sm:py-52 lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             <h1 className="text-5xl font-bold leading-none sm:text-6xl">
               I am
@@ -28,10 +28,10 @@ export default function Home() {
         </div>
         {/* cards */}
 
-        <h1 className="text-5xl font-bold font-Caveat text-black text-center">
+        <h1 className="text-5xl font-bold pb-4 font-Caveat text-black text-center">
           Projects
         </h1>
-        <section className="flex flex-wrap justify-between p-6 sm:py-24 gap-4" >
+        <section className="flex flex-wrap justify-between p-6 sm:py-24 gap-8" >
           <div className="max-w-xs p-6 rounded-md shadow-md border-2 border-black text-gray-900">
             <img
               src="https://picsum.photos/seed/picsum/300/300"
