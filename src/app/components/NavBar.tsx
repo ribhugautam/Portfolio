@@ -161,6 +161,20 @@ export default function NavBar() {
             <FaInstagram className="text-2xl" />
           </Link>
         </div>
+
+        <div
+          className={`hidden md:flex flex-row justify-between transition-all duration-500 ease-in-out items-center gap-4`}
+        >
+          <Link
+            href="https://www.linkedin.com/in/ribhu-gautam-9b5b6b1b7/ "
+            target="_blank"
+          >
+            <FaLinkedin className="text-2xl" />
+          </Link>
+          <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
+            <FaInstagram className="text-2xl" />
+          </Link>
+        </div>
       </div>
       <div
         onClick={() => setExpand(!expand)}
