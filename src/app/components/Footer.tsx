@@ -5,11 +5,11 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <div className="border-t-2 py-8 font-Caveat absolute bottom-0 w-full border-black" >    
+    <div className="border-t-2 py-8 pattern font-Caveat w-full border-black" >    
       <div className="flex flex-col sm:flex-row justify-between w-11/12 max-w-[80%] mx-auto items-center gap-4">
         <div className="flex flex-row justify-between items-center gap-2">
           <Link href="/">
-            <div className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-2 ">
+            <div className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-violet-600 ring-2 ">
               <Image src={user} alt="logo" className="object-cover" />
             </div>
           </Link>

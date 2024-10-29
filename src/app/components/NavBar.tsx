@@ -62,7 +62,7 @@ export default function NavBar() {
     >
       <div className="flex flex-row justify-between items-center gap-2">
         <Link href="/">
-          <div className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-2 ">
+          <div className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-2 ring-violet-600 ">
             <Image src={user} alt="logo" className="object-cover" />
           </div>
         </Link>
@@ -169,10 +169,10 @@ export default function NavBar() {
             href="https://www.linkedin.com/in/ribhu-gautam-9b5b6b1b7/ "
             target="_blank"
           >
-            <FaLinkedin className="text-2xl hover:animate-pulse " />
+            <FaLinkedin className="text-2xl hover:ring-violet-600 " />
           </Link>
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
-            <FaInstagram className="text-2xl hover:animate-pulse " />
+            <FaInstagram className="text-2xl hover:ring-violet-600 " />
           </Link>
         </div>
       </div>
