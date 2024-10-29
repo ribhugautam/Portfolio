@@ -56,7 +56,7 @@ export default function NavBar() {
     <div
       className={`flex fixed left-0 right-0 flex-row justify-between transition-all duration-0.5 ease-in-out font-Caveat items-center mx-auto mt-8 p-4 rounded-full ${
         top || !expand
-          ? "bg-black/25 backdrop-blur-sm "
+          ? "bg-black/25 backdrop-blur-md "
           : "bg-transparent backdrop-blur-0 "
       } w-[80%]`}
     >
