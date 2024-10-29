@@ -169,10 +169,10 @@ export default function NavBar() {
             href="https://www.linkedin.com/in/ribhu-gautam-9b5b6b1b7/ "
             target="_blank"
           >
-            <FaLinkedin className="text-2xl" />
+            <FaLinkedin className="text-2xl hover:animate-pulse " />
           </Link>
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
-            <FaInstagram className="text-2xl" />
+            <FaInstagram className="text-2xl hover:animate-pulse " />
           </Link>
         </div>
       </div>
@@ -183,19 +183,13 @@ export default function NavBar() {
         }`}
       >
         <div
-          className={`aspect-square w-1 rounded-full ${
-            !expand ? "bg-red-500" : "bg-black"
-          } `}
+          className={`bg-black aspect-square w-1 rounded-full`}
         />
         <div
-          className={`aspect-square w-1 rounded-full ${
-            !expand ? "bg-red-500" : "bg-black"
-          } `}
+          className={`bg-black aspect-square w-1 rounded-full`}
         />
         <div
-          className={`aspect-square w-1 rounded-full ${
-            !expand ? "bg-red-500" : "bg-black"
-          } `}
+          className={`bg-black aspect-square w-1 rounded-full`}
         />
       </div>
     </div>
