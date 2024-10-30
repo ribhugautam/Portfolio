@@ -3,7 +3,6 @@ import collage from "../../../public/doodlecollage.svg";
 import tech from "../../../public/tech-stack.svg";
 import Card from "../components/Card";
 import Image from "next/image";
-import { ImGooglePlus } from "react-icons/im";
 
 export default function Home() {
   return (
