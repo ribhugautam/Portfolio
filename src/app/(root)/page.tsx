@@ -94,9 +94,11 @@ export default function Home() {
           </p>
 
           <div className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
-            <img
+            <Image
               src={tech.src}
               alt=""
+              width={372}
+              height={72}
               className="object-cover scale-125 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
           </div>
