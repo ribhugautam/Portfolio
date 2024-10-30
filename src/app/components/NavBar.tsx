@@ -72,32 +72,32 @@ export default function NavBar() {
         {/* Desktop Nav */}
         <ul className="hidden md:flex flex-row justify-between gap-8 items-center">
           <li
-            className={`font-bold text-xl transition-all duration-500 ease-in-out  md:text-2xl ${
-              index === 0 ? "underline" : ""
+            className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
+              index === 0 ? "underline decoration-violet-600" : ""
             } underline-offset-4`}
           >
-            <Link href="/">Home</Link>
+            <Link href="/" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Home</Link>
           </li>
           <li
-            className={`font-bold text-xl transition-all duration-500 ease-in-out  md:text-2xl ${
-              index === 1 ? "underline" : ""
+            className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
+              index === 1 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href={"/about"}>About</Link>
+            <Link href={"/about"} className="hover:text-violet-600 transition-all duration-200 ease-linear " >About</Link>
           </li>
           <li
-            className={`font-bold text-xl transition-all duration-500 ease-in-out  md:text-2xl ${
-              index === 2 ? "underline" : ""
+            className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
+              index === 2 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Projects</Link>
           </li>
           <li
-            className={`font-bold text-xl transition-all duration-500 ease-in-out  md:text-2xl ${
-              index === 3 ? "underline" : ""
+            className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
+              index === 3 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href="/contact">Contact</Link>
+            <Link href="/contact" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Contact</Link>
           </li>
         </ul>
         {/* Mobile Nav */}
@@ -105,7 +105,7 @@ export default function NavBar() {
           <li>
             <Link href="/">
               <MdHome
-                className={`text-2xl transition-all duration-500 ease-in-out ${
+                className={`text-2xl active:text-violet-600 transition-all duration-500 ease-in-out ${
                   index === 0 ? "" : "text-black/50"
                 }`}
               />
@@ -114,7 +114,7 @@ export default function NavBar() {
           <li>
             <Link href="/about">
               <SiInformatica
-                className={` text-2xl transition-all duration-500 ease-in-out  ${
+                className={` text-2xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
                   index === 1 ? "" : "text-black/50"
                 } `}
               />
@@ -123,7 +123,7 @@ export default function NavBar() {
           <li>
             <Link href="/projects">
               <GrProjects
-                className={`text-xl transition-all duration-500 ease-in-out  ${
+                className={`text-xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
                   index === 2 ? "" : "text-black/50"
                 }`}
               />
@@ -132,7 +132,7 @@ export default function NavBar() {
           <li>
             <Link href="/contact">
               <IoMdMail
-                className={`text-2xl transition-all duration-500 ease-in-out  ${
+                className={`text-2xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
                   index === 3 ? "" : "text-black/50"
                 }`}
               />
@@ -155,10 +155,10 @@ export default function NavBar() {
             href="https://www.linkedin.com/in/ribhu-gautam-9b5b6b1b7/ "
             target="_blank"
           >
-            <FaLinkedin className="text-2xl" />
+            <FaLinkedin className="text-2xl active:text-violet-600 " />
           </Link>
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
-            <FaInstagram className="text-2xl" />
+            <FaInstagram className="text-2xl active:text-violet-600 " />
           </Link>
         </div>
 
@@ -169,10 +169,10 @@ export default function NavBar() {
             href="https://www.linkedin.com/in/ribhu-gautam-9b5b6b1b7/ "
             target="_blank"
           >
-            <FaLinkedin className="text-2xl hover:ring-violet-600 " />
+            <FaLinkedin className="text-2xl hover:text-violet-600 transition-all duration-200 ease-linear " />
           </Link>
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
-            <FaInstagram className="text-2xl hover:ring-violet-600 " />
+            <FaInstagram className="text-2xl hover:text-violet-600 transition-all duration-200 ease-linear" />
           </Link>
         </div>
       </div>
@@ -183,13 +183,13 @@ export default function NavBar() {
         }`}
       >
         <div
-          className={`bg-black aspect-square w-1 rounded-full`}
+          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
         />
         <div
-          className={`bg-black aspect-square w-1 rounded-full`}
+          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
         />
         <div
-          className={`bg-black aspect-square w-1 rounded-full`}
+          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
         />
       </div>
     </div>
