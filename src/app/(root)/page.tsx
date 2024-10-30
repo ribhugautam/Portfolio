@@ -72,7 +72,7 @@ export default function Home() {
             being proficient in Node.js and MongoDB. My foundation in web
             development includes a solid grasp of HTML, CSS, and JavaScript. I
             leverage version control using{" "}
-            <span className="text-violet-600"> Git and GitHub </span>, and I'm
+            <span className="text-violet-600"> Git and GitHub </span>, and I am
             comfortable working in both Linux and Windows environments.
             <br className="hidden lg:inline" />
             <br className="hidden lg:inline" />
@@ -82,7 +82,7 @@ export default function Home() {
             </span>
             . My cloud knowledge includes{" "}
             <span className="text-violet-600">AWS, Vercel and Firebase</span>,
-            which I utilize for scalable solutions. I'm also familiar with{" "}
+            which I utilize for scalable solutions. I am also familiar with{" "}
             <span className="text-violet-600">React Native</span> for mobile app
             development, and have worked with tools like Express.js, Redux, and
             Material UI to create seamless user experiences. My development
