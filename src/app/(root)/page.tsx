@@ -3,6 +3,7 @@ import collage from "../../../public/doodlecollage.svg";
 import tech from "../../../public/tech-stack.svg";
 // import Card from "../components/Card";
 import Image from "next/image";
+import * as motion from "framer-motion/client";
 
 export default function Home() {
   return (
@@ -10,7 +11,13 @@ export default function Home() {
       <div className="w-11/12 max-w-[80%] mx-auto font-Caveat">
         {/* Hero */}
         <div className="container flex flex-col-reverse justify-center p-6 py-28 pb-12 mx-auto sm:pt-36 lg:pt-52 lg:flex-row lg:justify-between">
-          <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
+          >
             <h1 className="text-5xl font-bold leading-none sm:text-6xl">
               I am
               <span className="text-violet-600"> Ribhu Gautam</span>
@@ -45,8 +52,14 @@ export default function Home() {
               <span className="font-semibold text-violet-600">creativity</span>,
               striving to make a positive impact through my work.
             </p>
-          </div>
-          <div className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            viewport={{ once: true }}
+            className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+          >
             <Image
               src={hero.src}
               alt=""
@@ -61,10 +74,9 @@ export default function Home() {
               height={80}
               className="absolute object-cover rounded-tl-full rounded-e-full -z-20 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
-          </div>
+          </motion.div>
         </div>
 
-        
         <h1 className="text-5xl font-bold font-Caveat underline decoration-violet-600 underline-offset-4 text-black text-center">
           Timeline
         </h1>
@@ -81,7 +93,13 @@ export default function Home() {
               </div>
               <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
                 <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
-                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 0.5 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
+                  >
                     <h3 className="text-3xl font-semibold tracking-wide">
                       Excellence Technology{" "}
                     </h3>
@@ -95,11 +113,15 @@ export default function Home() {
                       create dynamic web applications and tackle real-world
                       development challenges.
                     </p>
-                  </div>
-                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                    <h3 className="text-2xl font-bold tracking-wide">
-                      Tipzy
-                    </h3>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 1 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
+                  >
+                    <h3 className="text-2xl font-bold tracking-wide">Tipzy</h3>
                     <time className="text-md tracking-wide uppercase dark:text-gray-600">
                       Mar 2024
                     </time>
@@ -110,11 +132,15 @@ export default function Home() {
                       experience allowed me to apply my knowledge in a practical
                       setting and collaborate with a dynamic team.
                     </p>
-                  </div>
-                  <div className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600">
-                    <h3 className="text-2xl font-bold tracking-wide">
-                      Tipzy
-                    </h3>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    transition={{ ease: "easeOut", duration: 2 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
+                  >
+                    <h3 className="text-2xl font-bold tracking-wide">Tipzy</h3>
                     <time className="text-md tracking-wide uppercase dark:text-gray-600">
                       July 2024
                     </time>
@@ -126,7 +152,7 @@ export default function Home() {
                       collaborating closely with the team to deliver
                       high-quality solutions.
                     </p>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
             </div>
@@ -139,7 +165,13 @@ export default function Home() {
           Stack
         </h1>
         <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between p-6 py-24 gap-8">
-          <p className=" text-2xl p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 2 }}
+            viewport={{ once: true }}
+            className=" text-2xl p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
+          >
             As a <span className="text-violet-600">Full Stack Developer</span>,
             I have a diverse skill set that enables me to build robust web
             applications. I am currently enhancing my expertise in{" "}
@@ -166,9 +198,15 @@ export default function Home() {
               VS Code, IntelliJ IDEA, and PyCharm
             </span>
             , ensuring efficiency and productivity in my workflow.
-          </p>
+          </motion.p>
 
-          <div className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+            className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+          >
             <Image
               src={tech.src}
               alt=""
@@ -176,12 +214,14 @@ export default function Home() {
               height={72}
               className="object-cover scale-125 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="w-full pb-24">
           <div className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
-            <h2 className="text-5xl underline decoration-violet-600 font-bold">Fully compatible with</h2>
+            <h2 className="text-5xl underline decoration-violet-600 font-bold">
+              Fully compatible with
+            </h2>
             <div className="flex flex-wrap justify-center pt-12 lg:justify-between">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
