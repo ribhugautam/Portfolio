@@ -113,7 +113,7 @@ export default function Home() {
         {/* cards */}
 
         <h1 className="text-5xl font-bold font-Caveat underline decoration-violet-600 underline-offset-4 text-black text-center">
-          Projects
+          Timeline
         </h1>
         <section className="flex flex-wrap justify-between p-6 sm:py-24 gap-8">
           <Card
