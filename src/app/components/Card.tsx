@@ -20,5 +20,4 @@ function Card({ name, description, image }: CardProps) {
     </div>
   );
 }
-
 export default Card;
