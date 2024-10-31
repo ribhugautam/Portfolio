@@ -26,8 +26,10 @@ export default function Home() {
               transforming ideas into{" "}
               <span className="font-semibold">reality</span>. With a strong
               foundation in{" "}
-              <span className="font-semibold text-violet-600">full stack development</span>, I
-              am dedicated to creating{" "}
+              <span className="font-semibold text-violet-600">
+                full stack development
+              </span>
+              , I am dedicated to creating{" "}
               <span className="font-semibold">innovative solutions</span> that
               enhance user experiences and drive efficiency. My passion for
               technology fuels my{" "}
@@ -35,9 +37,13 @@ export default function Home() {
               allowing me to stay updated with the latest trends and best
               practices in the industry.
               <br className="hidden md:inline lg:hidden" />I believe in the
-              power of <span className="font-semibold text-violet-600">collaboration</span> and{" "}
-              <span className="font-semibold text-violet-600">creativity</span>, striving to
-              make a positive impact through my work.
+              power of{" "}
+              <span className="font-semibold text-violet-600">
+                collaboration
+              </span>{" "}
+              and{" "}
+              <span className="font-semibold text-violet-600">creativity</span>,
+              striving to make a positive impact through my work.
             </p>
           </div>
           <div className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
@@ -63,7 +69,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center">
           Stack
         </h1>
-        <section className="flex flex-col-reverse lg:flex-row items-center justify-between p-6 sm:py-24 gap-8">
+        <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between p-6 sm:py-24 gap-8">
           <p className=" text-2xl p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
             As a <span className="text-violet-600">Full Stack Developer</span>,
             I have a diverse skill set that enables me to build robust web
