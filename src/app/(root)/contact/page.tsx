@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 
-function page() {
+function Page() {
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleEmailClick = () => {
-    window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}?body=${message}`;
+  const handleEmailClick = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent the default form submission
+    window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}&body=${message}`;
     setName("");
     setMessage("");
   };
@@ -36,19 +37,6 @@ function page() {
                 className="block w-full p-2 rounded focus:outline-none focus:ring ring-violet-600 dark:bg-gray-100"
               />
             </div>
-            {/* <div>
-              <label htmlFor="email" className="block mb-1 ml-1">
-                Email
-              </label>
-              <input
-                id="email"
-                type="email"
-                placeholder="Your email"
-                onChange={(e) => setEmail(e.target.value)}
-                required
-                className="block w-full p-2 rounded focus:outline-none focus:ring ring-violet-600 dark:bg-gray-100"
-              />
-            </div> */}
             <div>
               <label htmlFor="message" className="block mb-1 ml-1">
                 Message
@@ -77,4 +65,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
