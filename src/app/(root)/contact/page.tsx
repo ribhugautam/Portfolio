@@ -10,7 +10,6 @@ function page() {
   const handleEmailClick = () => {
     window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}?body=${message}`;
     setName("");
-    setEmail("");
     setMessage("");
   };
 
