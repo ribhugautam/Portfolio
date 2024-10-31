@@ -7,7 +7,7 @@ function Page() {
   const [message, setMessage] = useState("");
 
   const handleEmailClick = (e: React.FormEvent) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
     window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}&body=${message}`;
     setName("");
     setMessage("");
@@ -16,12 +16,12 @@ function Page() {
   return (
     <div className="pattern h-dvh">
       <div className="min-h-screen font-Caveat w-11/12 max-w-[80%] mx-auto flex justify-center items-center">
-        <section className="p-6 w-full pt-36 md:pt-0 text-gray-800">
+        <section className="p-6 w-full pt-28 mx-auto sm:pt-36 lg:pt-32 text-gray-800">
           <form
             onSubmit={handleEmailClick}
-            className="w-[80%] p-8 mx-auto outline space-y-6 rounded-md shadow"
+            className="w-[80%] max-w-[700px] p-8 mx-auto outline space-y-6 rounded-md shadow"
           >
-            <h2 className="w-full text-3xl text-center font-bold leading-tight">
+            <h2 className="w-full underline underline-offset-4 decoration-violet-600 text-3xl text-center font-bold leading-tight">
               Contact Me
             </h2>
             <div>
@@ -34,7 +34,7 @@ function Page() {
                 placeholder="Your name"
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="block w-full p-2 rounded focus:outline-none focus:ring ring-violet-600 dark:bg-gray-100"
+                className="block w-full p-2 rounded focus:outline-none ring ring-black focus:ring-violet-600 dark:bg-gray-100"
               />
             </div>
             <div>
@@ -47,7 +47,7 @@ function Page() {
                 required
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Message..."
-                className="block w-full p-2 rounded autoexpand focus:outline-none focus:ring ring-violet-600 dark:bg-gray-100"
+                className="block w-full p-2 rounded autoexpand focus:outline-none ring ring-black focus:ring-violet-600 dark:bg-gray-100"
               ></textarea>
             </div>
             <div>
