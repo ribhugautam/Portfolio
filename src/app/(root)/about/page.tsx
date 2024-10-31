@@ -3,10 +3,10 @@ function page() {
     <div className="pattern h-dvh">
       <div className="w-11/12 max-w-[80%] font-Caveat mx-auto min-h-screen">
         <div className="pt-28 mx-auto sm:pt-36 lg:pt-32">
+          <h1 className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center">
+            About
+          </h1>
           <section className="p-6 rounded-lg my-6">
-            <h2 className="text-4xl underline underline-offset-4 decoration-violet-600 font-bold text-center text-gray-800 mb-4">
-              Professional Journey
-            </h2>
             <p className="text-xl text-gray-600 mb-4">
               With a robust foundation in full stack development, I have honed
               my skills in the MERN stack, which includes MongoDB, Express.js,
@@ -28,7 +28,9 @@ function page() {
         </div>
 
         <div className="rounded-lg p-6 my-6 mt-8">
-          <h2 className=" font-bold text-gray-800 underline underline-offset-4 decoration-violet-600 text-center text-4xl mb-4">Skills</h2>
+          <h2 className=" font-bold text-gray-800 underline underline-offset-4 decoration-violet-600 text-center text-4xl mb-4">
+            Skills
+          </h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
             <li className="text-xl">
               <strong className="text-violet-600 text-2xl">Languages:</strong>

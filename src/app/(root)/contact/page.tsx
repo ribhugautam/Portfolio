@@ -7,7 +7,7 @@ function Page() {
   const [message, setMessage] = useState("");
 
   const handleEmailClick = (e: React.FormEvent) => {
-    e.preventDefault(); 
+    e.preventDefault();
     window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}&body=${message}`;
     setName("");
     setMessage("");
@@ -15,15 +15,15 @@ function Page() {
 
   return (
     <div className="pattern h-dvh">
-      <div className="min-h-screen font-Caveat w-11/12 max-w-[80%] mx-auto flex justify-center items-center">
-        <section className="p-6 w-full pt-28 mx-auto sm:pt-36 lg:pt-32 text-gray-800">
+      <div className="min-h-screen font-Caveat w-11/12 max-w-[80%] mx-auto flex-col justify-center items-center">
+        <h2 className="w-full pt-36 mx-auto sm:pt-48 lg:pt-48 underline underline-offset-4 decoration-violet-600 text-5xl text-center font-bold leading-tight">
+          Contact Me
+        </h2>
+        <section className="p-6 w-full text-gray-800">
           <form
             onSubmit={handleEmailClick}
             className="w-[80%] max-w-[700px] p-8 mx-auto outline space-y-6 rounded-md shadow"
           >
-            <h2 className="w-full underline underline-offset-4 decoration-violet-600 text-3xl text-center font-bold leading-tight">
-              Contact Me
-            </h2>
             <div>
               <label htmlFor="name" className="block mb-1 ml-1">
                 Name
