@@ -98,12 +98,12 @@ function page() {
           <p className="text-xl text-gray-600 mb-4">
             When I’m not coding, I enjoy exploring new tech trends and spending
             quality time with my family. I love keeping up with the latest
-            advancements in technology, whether it's emerging programming
+            advancements in technology, whether it is emerging programming
             languages, innovative tools, or groundbreaking developments in AI
             and machine learning. This curiosity not only fuels my passion for
             development but also inspires me to think creatively about how
             technology can solve real-world problems. Additionally, I value the
-            moments spent with my family, whether it's embarking on outdoor
+            moments spent with my family, whether it is embarking on outdoor
             adventures, playing board games, or simply sharing stories over a
             meal. These experiences remind me of the importance of balance and
             perspective, helping me to stay grounded and inspired in my
