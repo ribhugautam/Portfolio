@@ -7,6 +7,7 @@ type Params = Promise <{ id: number }>;
 
 export async function generateStaticParams({ params }: { params: Params }) {
   const { id } = await params;
+  console.log(id);
 }
 
 export default async function page({ params }: { params: Params }) {
