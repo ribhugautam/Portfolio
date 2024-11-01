@@ -12,23 +12,20 @@ interface Project {
 }
 
 interface Params {
-  params: {
-    id: string;
-  };
+  id: string;
 }
 
-async function Page({ params }: Params) {
+interface PageProps {
+  params: Params;
+}
+
+const Page = async ({ params }: PageProps) => {
   const { id } = await params;
   const project: Project[] = data.projects;
-  const filteredProject = project.filter((p: Project) => p.id === Number(id));
+  const filteredProject = project.filter((p) => p.id === Number(id));
 
   if (filteredProject.length === 0) {
-    return (
-      <div className="w-11/12 min-h-screen font-Caveat max-w-[80%] mx-auto">
-        {" "}
-        Project not found
-      </div>
-    );
+    return <div>Project not found</div>;
   }
 
   return (
@@ -37,11 +34,8 @@ async function Page({ params }: Params) {
         <div className="pt-28 mx-auto sm:pt-36 lg:pt-32">
           <section className="flex flex-col p-6 justify-center items-center gap-12">
             <div className="relative w-full">
-              <Link
-                href="/projects"
-                className="text-4xl mt-2 flex justify-center items-center text-violet-600 absolute left-0"
-              >
-                <MdArrowBackIosNew />
+              <Link href="/projects" className="text-4xl mt-2 flex justify-center items-center text-violet-600 absolute left-0">
+                <MdArrowBackIosNew /> 
               </Link>
               <h1 className="text-5xl mb-12 font-bold pb-6 font-Caveat underline decoration-violet-600 underline-offset-4 text-black text-center">
                 {filteredProject[0].name}
@@ -50,7 +44,9 @@ async function Page({ params }: Params) {
             <img
               src={filteredProject[0].image}
               alt={filteredProject[0].name}
-              className="object-cover outline rounded-lg scale-125 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+              className="object-cover outline rounded-lg scale-125"
+              width={500} // Specify a width
+              height={500} // Specify a height
             />
             <Link
               href={filteredProject[0].link}
@@ -67,6 +63,6 @@ async function Page({ params }: Params) {
       </div>
     </div>
   );
-}
+};
 
 export default Page;
