@@ -3,15 +3,17 @@ import data from "../../../../lib/data.json";
 import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 
-type Params = Promise <{ id: number }>;
+type Params = Promise<{ id: number }>;
 
-export async function generateStaticParams({ params }: { params: Params }) {
-  const { id } = await params;
+export async function generateMetadata(props: { params: Params }) {
+  const params = await props.params;
+  const id = params.id;
   console.log(id);
 }
 
-export default async function page({ params }: { params: Params }) {
-  const { id } = await params;
+export default async function page(props: { params: Params }) {
+  const params = await props.params;
+  const id = params.id;
   const project = data.projects;
   const filteredProject = project.filter(
     (project: { id: number }) => project.id == id
