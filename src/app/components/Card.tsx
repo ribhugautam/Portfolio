@@ -6,9 +6,9 @@ interface CardProps {
   name: string;
   description: string;
   image: string;
-  link: string;
+  link?: string;
 }
-function Card({ id, name, description, image, link }: CardProps) {
+function Card({ id, name, description, image}: CardProps) {
   return (
     <>
       <Link
