@@ -2,15 +2,18 @@ import React from "react";
 import Link from "next/link";
 
 interface CardProps {
+  id: number;
   name: string;
   description: string;
   image: string;
   link: string;
 }
-function Card({ name, description, image, link }: CardProps) {
+function Card({ id, name, description, image, link }: CardProps) {
   return (
     <>
-      <Link href={link?link:"#"} target="_blank" >
+      <Link
+        href={`/projects/${id}`}
+      >
         <div className="max-w-lg p-6 rounded-md shadow-md border-2 border-black text-gray-900">
           <img
             src={image}
@@ -20,7 +23,7 @@ function Card({ name, description, image, link }: CardProps) {
           <div className="mt-6 mb-2">
             <h2 className="text-xl font-semibold tracking-wide">{name}</h2>
           </div>
-          <p className="text-gray-800">{description.slice(0, 400)+"..."}</p>
+          <p className="text-gray-800">{description.slice(0, 400) + "..."}</p>
         </div>
       </Link>
     </>
