@@ -12,8 +12,8 @@ export default function Home() {
         {/* Hero */}
         <div className="container flex flex-col-reverse justify-center p-6 py-28 pb-12 mx-auto sm:pt-36 lg:pt-52 lg:flex-row lg:justify-between">
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, transform: "translateX(-50px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
             transition={{ ease: "easeOut", duration: 0.5 }}
             viewport={{ once: true }}
             className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
@@ -54,9 +54,9 @@ export default function Home() {
             </p>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 2 }}
+            initial={{ opacity: 0, transform: "translateX(50px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
             viewport={{ once: true }}
             className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
           >
@@ -77,25 +77,37 @@ export default function Home() {
           </motion.div>
         </div>
 
-        <h1 className="text-5xl font-bold font-Caveat underline decoration-violet-600 underline-offset-4 text-black text-center">
+        <motion.h1
+          initial={{ opacity: 0, transform: "translateY(20px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-5xl font-bold font-Caveat underline decoration-violet-600 underline-offset-4 text-black text-center"
+        >
           Timeline
-        </h1>
+        </motion.h1>
         <section className="w-full">
           <div className="container max-w-5xl px-4 py-24 mx-auto">
             <div className="grid gap-4 mx-4 sm:grid-cols-12">
               <div className="col-span-12 sm:col-span-3">
-                <div className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0">
+                <motion.div
+                  initial={{ opacity: 0, transform: "translateX(-50px)" }}
+                  whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+                  transition={{ ease: "easeOut", duration: 0.5 }}
+                  viewport={{ once: true }}
+                  className="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0"
+                >
                   <h3 className="text-4xl font-bold">Ribhu Gautam</h3>
                   <span className="text-sm font-bold tracking-wider uppercase dark:text-gray-600">
                     Software Developer
                   </span>
-                </div>
+                </motion.div>
               </div>
               <div className="relative col-span-12 px-4 space-y-6 sm:col-span-9">
                 <div className="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:dark:bg-gray-300">
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, transform: "translateX(10px)" }}
+                    whileInView={{ opacity: 1, transform: "translateX(0px)" }}
                     transition={{ ease: "easeOut", duration: 0.5 }}
                     viewport={{ once: true }}
                     className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
@@ -115,8 +127,8 @@ export default function Home() {
                     </p>
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, transform: "translateX(20px)" }}
+                    whileInView={{ opacity: 1, transform: "translateX(0px)" }}
                     transition={{ ease: "easeOut", duration: 1 }}
                     viewport={{ once: true }}
                     className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
@@ -134,8 +146,8 @@ export default function Home() {
                     </p>
                   </motion.div>
                   <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
+                    initial={{ opacity: 0, transform: "translateX(30px)" }}
+                    whileInView={{ opacity: 1, transform: "translateX(0px)" }}
                     transition={{ ease: "easeOut", duration: 2 }}
                     viewport={{ once: true }}
                     className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:dark:bg-violet-600"
@@ -161,14 +173,20 @@ export default function Home() {
 
         {/* Skills */}
 
-        <h1 className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center">
+        <motion.h1
+          initial={{ opacity: 0, transform: "translateY(20px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center"
+        >
           Stack
-        </h1>
+        </motion.h1>
         <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between p-6 py-24 gap-8">
           <motion.p
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ ease: "easeOut", duration: 2 }}
+            initial={{ opacity: 0, transform: "translateX(50px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
             viewport={{ once: true }}
             className=" text-2xl p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
           >
@@ -201,8 +219,8 @@ export default function Home() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, transform: "translateX(-50px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
             transition={{ ease: "easeOut", duration: 0.5 }}
             viewport={{ once: true }}
             className="flex items-center relative z-[-2] justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
@@ -219,10 +237,22 @@ export default function Home() {
 
         <section className="w-full pb-24">
           <div className="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
-            <h2 className="text-5xl underline decoration-violet-600 font-bold">
+            <motion.h2
+             initial={{ opacity: 0, transform: "translateY(20px)" }}
+             whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+             transition={{ ease: "easeOut", duration: 0.5 }}
+             viewport={{ once: true }}
+              className="text-5xl underline decoration-violet-600 font-bold"
+            >
               Fully compatible with
-            </h2>
-            <div className="flex flex-wrap justify-center pt-12 lg:justify-between">
+            </motion.h2>
+            <motion.div
+              initial={{ opacity: 0, transform: "translateY(50px)" }}
+              whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+              transition={{ ease: "easeOut", duration: 0.5 }}
+              viewport={{ once: true }}
+              className="flex flex-wrap justify-center pt-12 lg:justify-between"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 32 32"
@@ -295,7 +325,7 @@ export default function Home() {
                 <title>Vue.js</title>
                 <path d="M24.306 4.019h-4.806l-3.5 5.537-3-5.537h-11l14 23.981 14-23.981zM5.481 6.019h3.363l7.156 12.387 7.15-12.387h3.363l-10.512 18.012z"></path>
               </svg>
-            </div>
+            </motion.div>
           </div>
         </section>
 

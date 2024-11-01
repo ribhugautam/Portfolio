@@ -12,6 +12,7 @@ import { MdHome } from "react-icons/md";
 import { SiInformatica } from "react-icons/si";
 import { GrProjects } from "react-icons/gr";
 import { IoMdMail } from "react-icons/io";
+import { motion } from "framer-motion";
 
 export default function NavBar() {
   const [top, setTop] = useState(false);
@@ -54,7 +55,7 @@ export default function NavBar() {
 
   return (
     <div
-      className={`flex fixed left-0 right-0 flex-row justify-between transition-all duration-0.5 ease-in-out font-Caveat items-center mx-auto mt-8 p-4 rounded-full ${
+      className={`flex fixed z-40 left-0 right-0 flex-row justify-between transition-all duration-0.5 ease-in-out font-Caveat items-center mx-auto mt-8 p-4 rounded-full ${
         top || !expand
           ? "bg-black/25 backdrop-blur-md shadow-xl"
           : "bg-transparent backdrop-blur-0 shadow-none"
@@ -62,47 +63,102 @@ export default function NavBar() {
     >
       <div className="flex flex-row justify-between items-center gap-2">
         <Link href="/">
-          <div className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-2 ring-violet-600 ">
+          <motion.div
+            initial={{ opacity: 0, transform: "translateX(-10px)" }}
+            whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+            className="rounded-full aspect-square overflow-hidden w-[1.8rem] ring-2 ring-violet-600 "
+          >
             <Image src={user} alt="logo" className="object-cover" />
-          </div>
+          </motion.div>
         </Link>
-        <h3 className="text-2xl hidden lg:flex font-bold">Ribhu Gautam</h3>
+        <motion.h3
+          initial={{ opacity: 0, transform: "translateX(10px)" }}
+          whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-2xl hidden lg:flex font-bold"
+        >
+          Ribhu Gautam
+        </motion.h3>
       </div>
       <div className="flex flex-col md:flex-row items-center gap-6">
         {/* Desktop Nav */}
         <ul className="hidden md:flex flex-row justify-between gap-8 items-center">
-          <li
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
             className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
               index === 0 ? "underline decoration-violet-600" : ""
             } underline-offset-4`}
           >
-            <Link href="/" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Home</Link>
-          </li>
-          <li
+            <Link
+              href="/"
+              className="hover:text-violet-600 transition-all duration-200 ease-linear "
+            >
+              Home
+            </Link>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
             className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
               index === 1 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href={"/about"} className="hover:text-violet-600 transition-all duration-200 ease-linear " >About</Link>
-          </li>
-          <li
+            <Link
+              href={"/about"}
+              className="hover:text-violet-600 transition-all duration-200 ease-linear "
+            >
+              About
+            </Link>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
             className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
               index === 2 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href="/projects" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Projects</Link>
-          </li>
-          <li
+            <Link
+              href="/projects"
+              className="hover:text-violet-600 transition-all duration-200 ease-linear "
+            >
+              Projects
+            </Link>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
             className={`font-bold text-xl active:text-violet-600 transition-all duration-500 ease-in-out  md:text-2xl ${
               index === 3 ? "underline decoration-violet-600 " : ""
             } underline-offset-4`}
           >
-            <Link href="/contact" className="hover:text-violet-600 transition-all duration-200 ease-linear " >Contact</Link>
-          </li>
+            <Link
+              href="/contact"
+              className="hover:text-violet-600 transition-all duration-200 ease-linear "
+            >
+              Contact
+            </Link>
+          </motion.li>
         </ul>
         {/* Mobile Nav */}
         <ul className="flex md:hidden flex-row justify-between gap-8 items-center">
-          <li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Link href="/">
               <MdHome
                 className={`text-2xl active:text-violet-600 transition-all duration-500 ease-in-out ${
@@ -110,8 +166,13 @@ export default function NavBar() {
                 }`}
               />
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Link href="/about">
               <SiInformatica
                 className={` text-2xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
@@ -119,8 +180,13 @@ export default function NavBar() {
                 } `}
               />
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(-10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Link href="/projects">
               <GrProjects
                 className={`text-xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
@@ -128,8 +194,13 @@ export default function NavBar() {
                 }`}
               />
             </Link>
-          </li>
-          <li>
+          </motion.li>
+          <motion.li
+            initial={{ opacity: 0, transform: "translateY(10px)" }}
+            whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+            transition={{ ease: "easeOut", duration: 0.5 }}
+            viewport={{ once: true }}
+          >
             <Link href="/contact">
               <IoMdMail
                 className={`text-2xl active:text-violet-600 transition-all duration-500 ease-in-out  ${
@@ -137,7 +208,7 @@ export default function NavBar() {
                 }`}
               />
             </Link>
-          </li>
+          </motion.li>
         </ul>
 
         {/* <div
@@ -146,7 +217,11 @@ export default function NavBar() {
           } `}
         /> */}
         {/* Social Icons */}
-        <div
+        <motion.div
+          initial={{ opacity: 0, transform: "translateY(-10px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          viewport={{ once: true }}
           className={`flex-row justify-between ${
             expand ? "invisible hidden" : "visible flex"
           } transition-all duration-500 ease-in-out items-center gap-4`}
@@ -160,9 +235,13 @@ export default function NavBar() {
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
             <FaInstagram className="text-2xl active:text-violet-600 " />
           </Link>
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ opacity: 0, transform: "translateY(-10px)" }}
+          whileInView={{ opacity: 1, transform: "translateY(0px)" }}
+          transition={{ ease: "easeOut", duration: 0.5 }}
+          viewport={{ once: true }}
           className={`hidden md:flex flex-row justify-between transition-all duration-500 ease-in-out items-center gap-4`}
         >
           <Link
@@ -174,24 +253,34 @@ export default function NavBar() {
           <Link href="https://www.instagram.com/ribhugautam/" target="_blank">
             <FaInstagram className="text-2xl hover:text-violet-600 transition-all duration-200 ease-linear" />
           </Link>
-        </div>
+        </motion.div>
       </div>
-      <div
+      <motion.div
+        initial={{ opacity: 0, transform: "translateX(10px)" }}
+        whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+        transition={{ ease: "easeOut", duration: 0.5 }}
+        viewport={{ once: true }}
         onClick={() => setExpand(!expand)}
         className={`md:hidden cursor-pointer ml-2 flex flex-col gap-1 transition-all duration-500 ease-in-out ${
           expand ? "rotate-0" : "rotate-90"
         }`}
       >
         <div
-          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
+          className={`bg-black ${
+            !expand ? "bg-violet-600" : ""
+          } aspect-square w-1 rounded-full`}
         />
         <div
-          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
+          className={`bg-black ${
+            !expand ? "bg-violet-600" : ""
+          } aspect-square w-1 rounded-full`}
         />
         <div
-          className={`bg-black ${!expand ? "bg-violet-600" : ""} aspect-square w-1 rounded-full`}
+          className={`bg-black ${
+            !expand ? "bg-violet-600" : ""
+          } aspect-square w-1 rounded-full`}
         />
-      </div>
+      </motion.div>
     </div>
   );
 }
