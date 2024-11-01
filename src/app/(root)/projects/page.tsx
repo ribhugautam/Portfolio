@@ -10,16 +10,24 @@ function page() {
             Projects
           </h1>
           <section className="flex flex-wrap p-6 justify-center items-baseline gap-8">
-            {data.projects.map((project: any) => (
-              <Card
-                key={project.id}
-                id={project.id}
-                name={project.name}
-                description={project.description}
-                image={project.image}
-                link={project.link}
-              />
-            ))}
+            {data.projects.map(
+              (project: {
+                id: number;
+                name: string;
+                description: string;
+                image: string;
+                link: string;
+              }) => (
+                <Card
+                  key={project.id}
+                  id={project.id}
+                  name={project.name}
+                  description={project.description}
+                  image={project.image}
+                  link={project.link}
+                />
+              )
+            )}
           </section>
         </div>
       </div>

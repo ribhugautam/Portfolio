@@ -3,10 +3,14 @@ import data from "../../../../lib/data.json";
 import Link from "next/link";
 import { MdArrowBackIosNew } from "react-icons/md";
 
+interface Project {
+  id: number;
+}
+
 async function page({ params }: { params: { id: string } }) {
   const { id } = await params;
   const project = data.projects;
-  const filteredProject = project.filter((project: any) => project.id == id);
+  const filteredProject = project.filter((p: Project) => p.id === Number(id));
   return (
     <div className="pattern h-dvh">
       <div className="w-11/12 min-h-screen font-Caveat max-w-[80%] mx-auto">
