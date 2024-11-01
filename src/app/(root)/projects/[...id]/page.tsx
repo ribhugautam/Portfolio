@@ -18,7 +18,7 @@ interface Params {
 }
 
 async function Page({ params }: Params) {
-  const { id } = params;
+  const { id } = await params;
   const project: Project[] = data.projects;
   const filteredProject = project.filter((p: Project) => p.id === Number(id));
 
