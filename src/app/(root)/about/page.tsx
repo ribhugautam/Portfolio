@@ -1,12 +1,26 @@
+import * as motion from "framer-motion/client";
+
 function page() {
   return (
     <div className="pattern h-dvh">
       <div className="w-11/12 max-w-[80%] font-Caveat mx-auto min-h-screen">
         <div className="pt-28 mx-auto sm:pt-36 lg:pt-32">
-          <h1 className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-5xl font-bold underline decoration-violet-600 underline-offset-4 font-Caveat text-black text-center"
+          >
             About
-          </h1>
-          <section className="p-6 rounded-lg my-6">
+          </motion.h1>
+          <motion.section
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="p-6 rounded-lg my-6"
+          >
             <p className="text-xl text-gray-600 mb-4">
               With a robust foundation in full stack development, I have honed
               my skills in the MERN stack, which includes MongoDB, Express.js,
@@ -24,38 +38,80 @@ function page() {
               applications that not only meet functional requirements but also
               delight users with intuitive interfaces and responsive design.
             </p>
-          </section>
+          </motion.section>
         </div>
 
         <div className="rounded-lg p-6 my-6 mt-8">
-          <h2 className=" font-bold text-gray-800 underline underline-offset-4 decoration-violet-600 text-center text-4xl mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className=" font-bold text-gray-800 underline underline-offset-4 decoration-violet-600 text-center text-4xl mb-4"
+          >
             Skills
-          </h2>
+          </motion.h2>
           <ul className="list-disc list-inside space-y-2 text-lg text-gray-600">
-            <li className="text-xl">
+            <motion.li
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.5 }}
+              viewport={{ once: true }}
+              className="text-xl"
+            >
               <strong className="text-violet-600 text-2xl">Languages:</strong>
               {` `}JavaScript, HTML, CSS
-            </li>
-            <li className="text-xl">
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 0.8 }}
+              viewport={{ once: true }}
+              className="text-xl"
+            >
               <strong className="text-violet-600 text-2xl">Frameworks:</strong>
               {` `}React, Node.js, Express
-            </li>
-            <li className="text-xl">
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1 }}
+              viewport={{ once: true }}
+              className="text-xl"
+            >
               <strong className="text-violet-600 text-2xl">Databases:</strong>
               {` `}MongoDB
-            </li>
-            <li className="text-xl">
+            </motion.li>
+            <motion.li
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              viewport={{ once: true }}
+              className="text-xl"
+            >
               <strong className="text-violet-600 text-2xl">Tools:</strong>
               {` `}Git, Docker, AWS
-            </li>
+            </motion.li>
           </ul>
         </div>
 
         <div className="mt-8 p-6 my-6 rounded-lg ">
-          <h2 className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4"
+          >
             My philosophy
-          </h2>
-          <p className="text-xl text-gray-600 mb-4">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-xl text-gray-600 mb-4"
+          >
             I believe in the power of collaboration and creativity. My goal is
             to create innovative solutions that enhance user experiences,
             fostering engagement and satisfaction through intuitive design and
@@ -69,14 +125,26 @@ function page() {
             centered around creating meaningful connections between users and
             technology, ensuring that every interaction is seamless and
             enjoyable.
-          </p>
+          </motion.p>
         </div>
 
         <div className="mt-8 p-6 my-6 rounded-lg ">
-          <h2 className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4"
+          >
             Current Focus
-          </h2>
-          <p className="text-xl text-gray-600 mb-4">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-xl text-gray-600 mb-4"
+          >
             I’m currently diving deeper into cloud technologies and enhancing my
             skills in React Native for mobile app development. As the tech
             landscape evolves, I recognize the importance of cloud computing in
@@ -90,14 +158,26 @@ function page() {
             performance. This combination of cloud expertise and mobile
             development skills is equipping me to tackle complex projects and
             deliver innovative solutions that meet modern user demands.
-          </p>
+          </motion.p>
         </div>
 
         <div className="mt-8 p-6 my-6 rounded-lg ">
-          <h2 className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4">
+          <motion.h2
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-4xl capitalize underline underline-offset-4 decoration-violet-600 text-center font-bold text-gray-800 mb-4"
+          >
             Personal Interests
-          </h2>
-          <p className="text-xl text-gray-600 mb-4">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            viewport={{ once: true }}
+            className="text-xl text-gray-600 mb-4"
+          >
             When I’m not coding, I enjoy exploring new tech trends and spending
             quality time with my family. I love keeping up with the latest
             advancements in technology, whether it is emerging programming
@@ -114,7 +194,7 @@ function page() {
             tech communities. This blend of personal and professional interests
             enriches my life and continuously motivates me to grow both as a
             developer and an individual.
-          </p>
+          </motion.p>
         </div>
       </div>
     </div>

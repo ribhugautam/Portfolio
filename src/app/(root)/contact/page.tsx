@@ -25,9 +25,9 @@ function Page() {
             className="w-[80%] max-w-[700px] p-8 mx-auto outline space-y-6 rounded-md shadow"
           >
             <div>
-              <label htmlFor="name" className="block mb-1 ml-1">
+              {/* <label htmlFor="name" className="block mb-1 ml-1">
                 Name
-              </label>
+              </label> */}
               <input
                 id="name"
                 type="text"
@@ -38,9 +38,9 @@ function Page() {
               />
             </div>
             <div>
-              <label htmlFor="message" className="block mb-1 ml-1">
+              {/* <label htmlFor="message" className="block mb-1 ml-1">
                 Message
-              </label>
+              </label> */}
               <textarea
                 id="message"
                 rows={8}
@@ -53,7 +53,7 @@ function Page() {
             <div>
               <button
                 type="submit"
-                className="w-full active:scale-95 px-4 py-2 ring ring-violet-600 font-bold rounded shadow text-xl text-black"
+                className="w-full active:scale-95 px-4 py-2 ring ring-violet-600 bg-violet-600 text-white font-bold rounded shadow text-xl"
               >
                 Send
               </button>

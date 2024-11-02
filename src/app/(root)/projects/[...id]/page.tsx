@@ -26,7 +26,7 @@ export default async function page(props: { params: Params }) {
             <div className="relative w-full">
               <Link
                 href="/projects"
-                className="text-4xl mt- flex justify-center items-center text-violet-600 absolute left-0 "
+                className="text-4xl mt-2 active:scale-95 flex justify-center items-center text-violet-600 absolute left-0 "
               >
                 <MdArrowBackIosNew />
               </Link>

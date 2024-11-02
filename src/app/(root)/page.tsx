@@ -1,7 +1,6 @@
 import hero from "../../../public/vector.svg";
-import collage from "../../../public/doodlecollage.svg";
+// import art from "../../../public/art.jpg";
 import tech from "../../../public/tech-stack.svg";
-// import Card from "../components/Card";
 import Image from "next/image";
 import * as motion from "framer-motion/client";
 
@@ -67,13 +66,13 @@ export default function Home() {
               height={80}
               className="object-cover h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
-            <Image
-              src={collage.src}
+            {/* <Image
+              src={art.src}
               alt=""
-              width={472}
-              height={80}
-              className="absolute object-cover rounded-tl-full rounded-e-full -z-20 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
-            />
+              width={800}
+              height={800}
+              className="absolute object-cover -z-20 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+            /> */}
           </motion.div>
         </div>
 

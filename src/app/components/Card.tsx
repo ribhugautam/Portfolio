@@ -21,9 +21,9 @@ function Card({ id, name, description, image}: CardProps) {
             className="object-contain object-center bg-black  w-full rounded-md h-72 border-black border-2"
           />
           <div className="mt-6 mb-2">
-            <h2 className="text-xl font-semibold tracking-wide">{name}</h2>
+            <h2 className="text-3xl text-violet-600 font-semibold tracking-wide">{name}</h2>
           </div>
-          <p className="text-gray-800">{description.slice(0, 400) + "..."}</p>
+          <p className="text-gray-800 text-xl ">{description.slice(0, 400) + "..."}</p>
         </div>
       </Link>
     </>

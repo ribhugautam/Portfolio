@@ -54,7 +54,11 @@ export default function NavBar() {
   }, [currentPath]);
 
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, transform: "translateY(-80px)", scale: 0 }}
+      whileInView={{ opacity: 1, transform: "translateY(0px)", scale: 1 }}
+      transition={{ ease: "easeOut", duration: 0.5 }}
+      viewport={{ once: true }}
       className={`flex fixed z-40 left-0 right-0 flex-row justify-between transition-all duration-0.5 ease-in-out font-Caveat items-center mx-auto mt-8 p-4 rounded-full ${
         top || !expand
           ? "bg-black/25 backdrop-blur-md shadow-xl"
@@ -255,15 +259,15 @@ export default function NavBar() {
           </Link>
         </motion.div>
       </div>
-      <motion.div
-        initial={{ opacity: 0, transform: "translateX(10px)" }}
-        whileInView={{ opacity: 1, transform: "translateX(0px)" }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
-        viewport={{ once: true }}
+      <div
+        // initial={{ opacity: 0, transform: "translateX(10px)" }}
+        // whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+        // transition={{ ease: "easeOut", duration: 0.5 }}
+        // viewport={{ once: true }}
         onClick={() => setExpand(!expand)}
-        className={`md:hidden cursor-pointer ml-2 flex flex-col gap-1 transition-all duration-500 ease-in-out ${
+        className={`md:hidden ${
           expand ? "rotate-0" : "rotate-90"
-        }`}
+        } cursor-pointer ml-2 flex flex-col gap-1 transition-all duration-500 ease-in-out`}
       >
         <div
           className={`bg-black ${
@@ -280,7 +284,7 @@ export default function NavBar() {
             !expand ? "bg-violet-600" : ""
           } aspect-square w-1 rounded-full`}
         />
-      </motion.div>
-    </div>
+      </div>
+    </motion.div>
   );
 }
