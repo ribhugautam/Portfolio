@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import * as motion from "framer-motion/client";
 
 function Page() {
   const [name, setName] = useState("");
@@ -16,10 +17,22 @@ function Page() {
   return (
     <div className="pattern h-dvh">
       <div className="min-h-screen font-Caveat w-11/12 max-w-[80%] mx-auto flex-col justify-center items-center">
-        <h2 className="w-full pt-36 mx-auto sm:pt-48 lg:pt-48 underline underline-offset-4 decoration-violet-600 text-5xl text-center font-bold leading-tight">
+        <motion.h2
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          viewport={{ once: true }}
+          className="w-full pt-36 mx-auto sm:pt-48 lg:pt-48 underline underline-offset-4 decoration-violet-600 text-4xl sm:text-5xl text-center font-bold leading-tight"
+        >
           Contact Me
-        </h2>
-        <section className="p-6 w-full text-gray-800">
+        </motion.h2>
+        <motion.section
+          initial={{ opacity: 0, y: -10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.8 }}
+          viewport={{ once: true }}
+          className="p-6 w-full text-gray-800"
+        >
           <form
             onSubmit={handleEmailClick}
             className="w-[80%] max-w-[700px] p-8 mx-auto outline space-y-6 rounded-md shadow"
@@ -59,7 +72,7 @@ function Page() {
               </button>
             </div>
           </form>
-        </section>
+        </motion.section>
       </div>
     </div>
   );

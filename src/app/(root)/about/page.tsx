@@ -1,4 +1,9 @@
 import * as motion from "framer-motion/client";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About | Ribhu Gautam",
+};
 
 function page() {
   return (
