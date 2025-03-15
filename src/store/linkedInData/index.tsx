@@ -25,7 +25,11 @@ const initialState: LinkedInProfile = {
     stateCode: "",
   },
   educations: [],
-  position: { companyName: "", title: "", start: "" },
+  position: {
+    companyName: "",
+    title: "",
+    start: { day: 0, month: 0, year: 0 },
+  },
   fullPositions: [],
 };
 
