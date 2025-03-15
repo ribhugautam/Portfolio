@@ -15,6 +15,7 @@ export type LinkedInDataStore = {
 export default function Home() {
   const { linkedInData, setLinkedInData } = useStore() as LinkedInDataStore;
   const [loading, setLoading] = useState(true);
+  const API_KEY = process.env.NEXT_PUBLIC_SECRET_API_KEY;
 
   useEffect(() => {
     const fetchLinkedInData = async () => {
@@ -24,8 +25,7 @@ export default function Home() {
           {
             method: "GET",
             headers: {
-              "x-rapidapi-key":
-                "ca81055fa3msh936dbad3a46b23dp1476e8jsn5af9a5a7d7ba",
+              "x-rapidapi-key": API_KEY ?? "",
               "x-rapidapi-host": "linkedin-data-api.p.rapidapi.com",
             },
           }
@@ -39,7 +39,7 @@ export default function Home() {
       }
     };
     fetchLinkedInData();
-  }, [setLinkedInData]);
+  }, [API_KEY, setLinkedInData]);
 
   if (loading) {
     return (
