@@ -9,7 +9,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Suspense
         fallback={
           <div className="pattern h-dvh">
-            <div className="h-dvh flex items-center justify-center">
+            <div className="h-dvh flex items-center  justify-center">
               <div className="loader"></div>
             </div>
           </div>
