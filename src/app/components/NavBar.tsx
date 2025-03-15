@@ -51,7 +51,7 @@ export default function NavBar() {
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ ease: "easeOut", duration: 0.5 }}
       className={`flex fixed z-40 left-0 right-0 p-0 md:p-4 justify-between items-center mx-auto mt-8 ${
-        !expand ? "p-4" : "p-2 px-8"
+        !expand ? "p-4" : "px-8"
       } rounded-full w-[80%] transition-all duration-500 ease-in-out font-Caveat ${
         top || !expand
           ? "bg-black/25 backdrop-blur-md shadow-xl"

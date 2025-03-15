@@ -5,7 +5,7 @@ import HeroSection from "../components/heroSection";
 import StackSection from "../components/stackSection";
 import CompatibleWithSection from "../components/compatibleWithSection";
 import useStore from "@/store/linkedInData";
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "react"
 
 export type LinkedInDataStore = {
   linkedInData: LinkedInProfile;

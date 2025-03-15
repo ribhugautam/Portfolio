@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import * as motion from "framer-motion/client";
+import { motion } from "framer-motion";
 
 function Page() {
   const [name, setName] = useState("");
@@ -9,68 +9,65 @@ function Page() {
 
   const handleEmailClick = (e: React.FormEvent) => {
     e.preventDefault();
-    window.location.href = `mailto:gautamribhu@gmail.com?subject=${name}&body=${message}`;
+    const subject = encodeURIComponent(name);
+    const body = encodeURIComponent(message);
+    window.location.href = `mailto:gautamribhu@gmail.com?subject=${subject}&body=${body}`;
     setName("");
     setMessage("");
   };
 
   return (
     <div className="pattern h-dvh">
-      <div className="min-h-screen font-Caveat w-11/12 max-w-[80%] mx-auto flex-col justify-center items-center">
+      <div className="min-h-screen font-Caveat w-11/12 max-w-5xl mx-auto flex flex-col justify-center items-center">
         <motion.h2
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.5 }}
           viewport={{ once: true }}
-          className="w-full pt-36 mx-auto sm:pt-48 lg:pt-48 underline underline-offset-4 decoration-violet-600 text-4xl sm:text-5xl text-center font-bold leading-tight"
+          className="w-full pt-24 sm:pt-32 lg:pt-40 underline underline-offset-4 decoration-violet-600 text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-bold leading-tight"
         >
           Contact Me
         </motion.h2>
+
         <motion.section
           initial={{ opacity: 0, y: -10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.8 }}
           viewport={{ once: true }}
-          className="p-6 w-full text-gray-800"
+          className="p-4 sm:p-6 md:p-8 w-full text-gray-800"
         >
           <form
             onSubmit={handleEmailClick}
-            className="w-[80%] max-w-[700px] p-8 mx-auto outline space-y-6 rounded-md shadow"
+            className="w-full max-w-md sm:max-w-lg md:max-w-xl p-4 sm:p-6 md:p-8 mx-auto border-2 border-black rounded-lg space-y-6"
           >
-            <div>
-              {/* <label htmlFor="name" className="block mb-1 ml-1">
-                Name
-              </label> */}
-              <input
-                id="name"
-                type="text"
-                placeholder="Your name"
-                onChange={(e) => setName(e.target.value)}
-                required
-                className="block w-full p-2 rounded focus:outline-none ring ring-black focus:ring-violet-600 dark:bg-gray-100"
-              />
-            </div>
-            <div>
-              {/* <label htmlFor="message" className="block mb-1 ml-1">
-                Message
-              </label> */}
-              <textarea
-                id="message"
-                rows={8}
-                required
-                onChange={(e) => setMessage(e.target.value)}
-                placeholder="Message..."
-                className="block w-full p-2 rounded autoexpand focus:outline-none ring ring-black focus:ring-violet-600 dark:bg-gray-100"
-              ></textarea>
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="w-full active:scale-95 px-4 py-2 ring ring-violet-600 bg-violet-600 text-white font-bold rounded shadow text-xl"
-              >
-                Send
-              </button>
-            </div>
+            <input
+              id="name"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              required
+              aria-label="Name"
+              className="block w-full p-3 sm:p-4 rounded border-2 border-black focus:outline-none focus:ring-2 dark:bg-gray-100"
+            />
+
+            <textarea
+              id="message"
+              rows={6}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="Your message..."
+              required
+              aria-label="Message"
+              className="block w-full p-3 sm:p-4 rounded border-2 border-black focus:outline-none focus:ring-2 dark:bg-gray-100"
+            />
+
+            <button
+              type="submit"
+              className="w-full px-4 py-2 sm:px-6 sm:py-3 bg-violet-600 text-white font-semibold rounded shadow-md hover:bg-violet-700 active:scale-95 focus:outline-none focus:ring-2 focus:ring-violet-600"
+            >
+              Send
+            </button>
           </form>
         </motion.section>
       </div>

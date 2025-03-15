@@ -1,12 +1,23 @@
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
+import React, { Suspense } from "react";
+import Footer from "../components/footer";
+import NavBar from "../components/navBar";
 
-export default function layout({ children }: { children: React.ReactNode }) {
-  return(
+export default function Layout({ children }: { children: React.ReactNode }) {
+  return (
     <>
-      <NavBar/>
-      {children}
-      <Footer/>
+      <NavBar />
+      <Suspense
+        fallback={
+          <div className="pattern h-dvh">
+            <div className="h-dvh flex items-center justify-center">
+              <div className="loader"></div>
+            </div>
+          </div>
+        }
+      >
+        {children}
+      </Suspense>
+      <Footer />
     </>
-  )
+  );
 }

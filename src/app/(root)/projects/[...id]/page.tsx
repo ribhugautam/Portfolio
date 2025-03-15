@@ -19,6 +19,19 @@ export default async function page(props: { params: Params }) {
   const filteredProject = project.filter(
     (project: { id: number }) => project.id == id
   );
+
+  if (filteredProject.length === 0) {
+    return (
+      <div className="pattern h-dvh">
+        <div className="w-11/12 min-h-screen font-Caveat h-full max-w-[80%] mx-auto">
+          <div className="pt-28 mx-auto flex justify-center items-center h-full sm:pt-36 lg:pt-32">
+            <span className="text-4xl font-bold text-gray-400" >Page not found</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="pattern h-dvh">
       <div className="w-11/12 min-h-screen font-Caveat max-w-[80%] mx-auto">
@@ -27,7 +40,7 @@ export default async function page(props: { params: Params }) {
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.5 }}
+              transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
               className="relative w-full"
             >

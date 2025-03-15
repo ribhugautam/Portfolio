@@ -1,4 +1,4 @@
-import Card from "@/app/components/Card";
+import Card from "@/app/components/card";
 import data from "../../../lib/data.json";
 import * as motion from "framer-motion/client";
 import type { Metadata } from "next";
