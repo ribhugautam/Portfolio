@@ -1,7 +1,6 @@
 import * as motion from "framer-motion/client";
 // import { motion } from "framer-motion";
 import type { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About | Ribhu Gautam",
