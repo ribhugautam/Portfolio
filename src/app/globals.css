@@ -18,6 +18,10 @@
   animation: glitch infinite 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.animate-glitch-alt {
+  animation: glitch-alt 1s infinite;
+}
+
 @keyframes glitch {
   0% {
     transform: translate(0);
@@ -63,5 +67,13 @@
     transform: translate(0);
     opacity: 1;
   }
+}
+
+@keyframes glitch-alt {
+  0% { transform: translate(0); }
+  25% { transform: translate(2px, 2px); }
+  50% { transform: translate(-2px, -2px); }
+  75% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
 }
 

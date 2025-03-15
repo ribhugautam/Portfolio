@@ -181,7 +181,8 @@ export default function Home() {
         >
           Stack
         </motion.h1>
-        <section className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between p-6 py-24 gap-8">
+        <section className="w-full">
+        <div className="container max-w-8xl px-4 py-24 mx-auto flex flex-col-reverse lg:flex-row-reverse items-center justify-between p-6 gap-8">
           <motion.p
             initial={{ opacity: 0, transform: "translateX(50px)" }}
             whileInView={{ opacity: 1, transform: "translateX(0px)" }}
@@ -232,6 +233,7 @@ export default function Home() {
               className="object-cover scale-125 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
             />
           </motion.div>
+        </div>
         </section>
 
         <section className="w-full pb-24">
