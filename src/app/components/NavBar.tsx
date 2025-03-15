@@ -50,7 +50,9 @@ export default function NavBar() {
       initial={{ opacity: 0, y: -80, scale: 0 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ ease: "easeOut", duration: 0.5 }}
-      className={`flex fixed z-40 left-0 right-0 justify-between items-center mx-auto mt-8 p-4 rounded-full w-[80%] transition-all duration-500 ease-in-out font-Caveat ${
+      className={`flex fixed z-40 left-0 right-0 justify-between items-center mx-auto mt-8 ${
+        !expand ? "p-4" : "p-2 px-8"
+      } rounded-full w-[80%] transition-all duration-500 ease-in-out font-Caveat ${
         top || !expand
           ? "bg-black/25 backdrop-blur-md shadow-xl"
           : "bg-transparent"
@@ -85,7 +87,11 @@ export default function NavBar() {
       </ul>
 
       <ul className="flex md:hidden flex-col gap-4 sm:gap-8 justify-center items-center relative">
-        <div className={`flex justify-center items-center gap-8 sm:gap-16 ${expand ? "mt-4 sm:mt-8" : "mt-0"} transition-all duration-500 ease-in-out `}>
+        <div
+          className={`flex justify-center items-center gap-8 sm:gap-16 ${
+            expand ? "mt-4 sm:mt-8" : "mt-0"
+          } transition-all duration-500 ease-in-out `}
+        >
           {navLinks.map((link, idx) => (
             <li key={link.href}>
               <Link href={link.href}>
