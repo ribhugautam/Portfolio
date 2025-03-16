@@ -6,25 +6,25 @@ import { motion } from "framer-motion";
 
 const timelineData: Position[] = [
   {
+    title: "Software Engineer",
+    companyName: "Nature Technologies Pvt Ltd",
+    start: { day: 0, month: 11, year: 2024 },
+    description:
+      "Built and maintained complex React-based ERP applications, designing scalable architectures and frameworks. Upgraded large codebases with the latest dependencies, ensuring seamless deployment via IIS and Azure CI/CD. Conducted code reviews, optimized workflows, and implemented robust testing strategies using Vitest.",
+  },
+  {
+    title: "Full Stack Developer",
+    companyName: "Tipzy (Script Studio Technology Pvt Ltd)",
+    start: { day: 0, month: 2, year: 2024 },
+    description:
+      "Designed and developed an application ecosystem with three interconnected apps and microservices. Architected modular components, optimized state management using Redux Toolkit and TanStack Query, and improved backend performance by 30%. Delivered features that boosted user engagement by 20% while ensuring 99.9% uptime.",
+  },
+  {
     title: "Full Stack Trainee",
     companyName: "Excellence Technology",
     start: { day: 0, month: 0, year: 2024 },
     description:
-      "As a Full Stack Trainee, I gained hands-on experience with the MERN stack, mastering MongoDB, Express.js, React, and Node.js. This training equipped me with the skills to create dynamic web applications and tackle real-world development challenges.",
-  },
-  {
-    title: "Front End Developer Intern",
-    companyName: "Tipzy",
-    start: { day: 0, month: 2, year: 2024 },
-    description:
-      "As a Front End Developer Intern at Tipzy, I contributed to the development of three web applications, enhancing my skills in creating user-friendly interfaces. This experience allowed me to apply my knowledge in a practical setting and collaborate with a dynamic team.",
-  },
-  {
-    title: "Full Stack Developer",
-    companyName: "Tipzy",
-    start: { day: 0, month: 6, year: 2023 },
-    description:
-      "I was promoted to Full Stack Developer at Tipzy after my internship, where I expanded my skills to encompass both front-end and back-end development. In this role, I contributed to building and optimizing web applications, collaborating closely with the team to deliver high-quality solutions.",
+      "Built and optimized responsive web applications using React.JS, Tailwind CSS, and Appwrite, reducing load time by 15%. Conducted code reviews, implemented performance enhancements, and ensured timely delivery by managing stakeholder communication.",
   },
 ];
 
@@ -43,7 +43,9 @@ const TimelineItem = ({
     className="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-600"
   >
     <h3 className="text-2xl font-bold tracking-wide">{companyName}</h3>
-    <h4 className="text-xl font-semibold text-violet-600 tracking-wide">{title}</h4>
+    <h4 className="text-xl font-semibold text-violet-600 tracking-wide">
+      {title}
+    </h4>
     <time className="text-md tracking-wide uppercase text-gray-600">
       {dayjs(
         `${start.year}-${start.month + 1}-${start.day + 1}`,

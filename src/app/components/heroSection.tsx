@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import hero from "../../../public/vector.svg";
+import { useEffect, useState } from "react";
 
 type ContentPart = {
   text?: string;
@@ -78,7 +79,7 @@ const generateContentObject = (paragraph: string): ContentPart[] => {
 };
 
 const heroContent = generateContentObject(
-  "With a strong focus on enhancing user experiences through innovative solutions, I bring expertise in software development and integration. My skill set includes specialized knowledge in payment gateway integration, particularly with Cashfree and Razorpay systems, alongside proficiency in developing QR code scanning and camera integration features. I am known for efficiently resolving code conflicts and currently leverage AWS services like AWS S3 and AWS Amplify to streamline image management and implement robust CI/CD pipelines at Tipzy. Passionate about delivering high-quality solutions, I drive business growth and ensure customer satisfaction through scalable, secure, and performance-driven software implementations."
+  "Passionate about crafting scalable React-based ERP applications, optimizing deployments with Azure CI/CD, and integrating AWS services. Proficient in React, TypeScript, and modern web technologies, I focus on building efficient architectures, ensuring robust testing, and delivering high-performance solutions that enhance user experience and system reliability."
 );
 
 const TypingText = ({ text }: { text: string }) => (
@@ -91,21 +92,76 @@ const TypingText = ({ text }: { text: string }) => (
   </motion.span>
 );
 
+const typingContainer = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
+
+const typingText = {
+  hidden: { opacity: 0, x: -10 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      ease: "easeOut",
+      duration: 0.3,
+    },
+  },
+};
+
 const HeroSection = ({ summary }: { summary: string }): JSX.Element => {
   const filteredSummary = generateContentObject(summary);
+  const texts = ["Ribhu Gautam", "Software Engineer"];
+  const [currentText, setCurrentText] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentText((prev) => (prev + 1) % texts.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [texts.length]);
+
   return (
-    <div className="container flex flex-col-reverse justify-center gap-8 p-6 py-28 pb-12 mx-auto sm:pt-36 lg:pt-52 lg:flex-row lg:justify-between">
+    <div className="container flex flex-col-reverse justify-center gap-8 p-6 pt-28 pb-12 mx-auto sm:pt-36 lg:pt-52 lg:flex-row lg:items-center lg:justify-between">
       <motion.div
-        initial={{ opacity: 0, transform: "translateX(-50px)" }}
-        whileInView={{ opacity: 1, transform: "translateX(0px)" }}
-        transition={{ ease: "easeOut", duration: 0.5 }}
+        initial={{ opacity: 0, x: -50 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ ease: "easeOut", duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
+        className="flex flex-col justify-center p-4 sm:p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
       >
-        <h1 className="text-5xl font-bold leading-none sm:text-6xl">
-          I am <span className="text-violet-600">Ribhu Gautam</span>
+        <h1 className="text-4xl flex flex-col md:flex-row md:gap-2 justify-center items-center whitespace-nowrap sm:text-5xl md:text-6xl font-bold leading-tight">
+          <span>Hi, I&apos;m </span>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={texts[currentText]}
+              className="text-violet-600 inline-flex overflow-hidden"
+              variants={typingContainer}
+              initial="hidden"
+              animate="show"
+              exit={{ opacity: 0 }}
+            >
+              {texts[currentText].split("").map((char, index) => (
+                <motion.span
+                  key={index}
+                  variants={typingText}
+                  style={{
+                    display: "inline-block",
+                    marginRight: char === " " ? "0.3em" : "0",
+                    fontSize: "inherit",
+                  }}
+                >
+                  {char}
+                </motion.span>
+              ))}
+            </motion.span>
+          </AnimatePresence>
         </h1>
-        <p className="mt-6 mb-8 text-2xl sm:mb-12">
+        <p className="mt-4 mb-6 text-lg sm:text-xl md:text-2xl">
           {(filteredSummary === null ? filteredSummary : heroContent).map(
             (part, index) =>
               part.text || part.span ? (
@@ -114,19 +170,20 @@ const HeroSection = ({ summary }: { summary: string }): JSX.Element => {
           )}
         </p>
       </motion.div>
+
       <motion.div
-        initial={{ opacity: 0, transform: "translateX(50px)" }}
-        whileInView={{ opacity: 1, transform: "translateX(0px)" }}
+        initial={{ opacity: 0, x: 50 }}
+        whileInView={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.5 }}
         viewport={{ once: true }}
-        className="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+        className="flex items-center justify-center p-6 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
       >
         <Image
           src={hero.src}
           alt="Hero Image"
           width={372}
           height={372}
-          className="object-cover h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"
+          className="object-cover h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 rounded-lg"
         />
       </motion.div>
     </div>
