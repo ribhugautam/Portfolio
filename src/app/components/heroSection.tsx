@@ -132,14 +132,14 @@ const HeroSection = ({ summary }: { summary: string }): JSX.Element => {
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ ease: "easeOut", duration: 0.6 }}
         viewport={{ once: true }}
-        className="flex flex-col justify-center p-4 sm:p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
+        className="flex flex-col lg:items-start justify-center p-4 sm:p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left"
       >
-        <h1 className="text-4xl flex flex-col md:flex-row md:gap-2 justify-center items-center whitespace-nowrap sm:text-5xl md:text-6xl font-bold leading-tight">
+        <h1 className="text-4xl overflow-visible flex flex-col md:flex-row md:gap-2 justify-center items-center whitespace-nowrap sm:text-5xl md:text-6xl font-bold leading-tight">
           <span>Hi, I&apos;m </span>
           <AnimatePresence mode="wait">
             <motion.span
               key={texts[currentText]}
-              className="text-violet-600 inline-flex overflow-hidden"
+              className="text-violet-600 inline-flex"
               variants={typingContainer}
               initial="hidden"
               animate="show"
